@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite">
+    <test name="Registration Test">
+        <classes>
+            <class name="testcases.TestUserRegistration"/>
+        </classes>
+    </test>
+    <test name="Login Test">
+        <classes>
+            <class name="testcases.TestUserLogin"/>
+        </classes>
+    </test>
+    <test name="Search Products Test">
+        <classes>
+            <class name="testcases.TestSearchFunction"/>
+        </classes>
+    </test>
+    <test name="Add To Cart Test">
+        <classes>
+            <class name="testcases.TestAddToCart"/>
+        </classes>
+    </test>
+    <test name="Discount Test">
+        <classes>
+            <class name="testcases.TestGiftCart"/>
+        </classes>
+    </test>
+    <test name="Checkout Product Test">
+        <classes>
+            <class name="testcases.TestCheckout"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Hoffman_Sabrina_AlexAndNova_CaseStudy"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="14.565">
+    <properties></properties>
+
+
+
+            <testcase
+                name="tc0015_remove_item_from_cart_test"
+                time="14.565"
+                classname="testcases.TestAddToCart">
+            </testcase>
+</testsuite>

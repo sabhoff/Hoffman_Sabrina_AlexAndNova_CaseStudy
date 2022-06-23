@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Hoffman_Sabrina_AlexAndNova_CaseStudy"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="1.562">
+    <properties></properties>
+
+
+
+            <testcase
+                name="tc0009_no_search_input_test"
+                time="1.562"
+                classname="testcases.TestSearchFunction">
+            </testcase>
+</testsuite>

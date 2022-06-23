@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Hoffman_Sabrina_AlexAndNova_CaseStudy"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="16.060">
+    <properties></properties>
+
+
+
+            <testcase
+                name="tc0016_apply_coupon_code_test"
+                time="16.060"
+                classname="testcases.TestGiftCart">
+            </testcase>
+</testsuite>

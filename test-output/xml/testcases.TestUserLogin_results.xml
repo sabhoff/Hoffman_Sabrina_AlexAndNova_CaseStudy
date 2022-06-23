@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Hoffman_Sabrina_AlexAndNova_CaseStudy"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="24.166">
+    <properties></properties>
+
+
+
+            <testcase
+                name="tc0006_login_user_test"
+                time="24.166"
+                classname="testcases.TestUserLogin">
+            </testcase>
+</testsuite>
