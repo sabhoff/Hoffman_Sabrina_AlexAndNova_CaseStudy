@@ -3,20 +3,19 @@ package testcases;
 import library.SelectBrowser;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.SearchResultsPage;
 
 import java.time.Duration;
 
-public class TestSearchFunction {
+public class TestSearchFunction extends Base {
 
-    WebDriver driver;
     HomePage homePage;
     SearchResultsPage searchResultsPage;
 
-    @BeforeTest
+    @BeforeMethod
     public void browserLaunch() {
         driver = SelectBrowser.startBrowser("Chrome");
         driver.get("https://www.alexandnova.com/");

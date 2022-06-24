@@ -3,20 +3,19 @@ package testcases;
 import library.SelectBrowser;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 
 import java.time.Duration;
 
-public class TestUserLogin {
+public class TestUserLogin extends Base {
 
-    WebDriver driver;
     HomePage homePage;
     LoginPage loginPage;
 
-    @BeforeTest
+    @BeforeMethod
     public void browserLaunch() {
         driver = SelectBrowser.startBrowser("Chrome");
         driver.get("https://www.alexandnova.com/");

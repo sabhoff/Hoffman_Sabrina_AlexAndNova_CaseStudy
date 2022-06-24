@@ -1,24 +1,21 @@
 package testcases;
 
 import library.SelectBrowser;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.decorators.WebDriverDecorator;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
 
 import java.time.Duration;
 
-public class TestAddToCart {
+public class TestAddToCart extends Base {
 
-    WebDriver driver;
     HomePage homePage;
     BestSellersPage bestSellersPage;
     ItemDescriptionPage itemDescriptionPage;
     CartPage cartPage;
 
-    @BeforeTest
+    @BeforeMethod
     public void browserLaunch() {
         driver = SelectBrowser.startBrowser("Chrome");
         driver.get("https://www.alexandnova.com/");
@@ -69,10 +66,13 @@ public class TestAddToCart {
         Thread.sleep(2000);
         driver.navigate().refresh();
         //Add Assertion
+        String actual = "1";
+        String expected = itemDescriptionPage.checkQuantity();
+        Assert.assertEquals(actual, expected);
     }
 
     @Test(priority = 13)
-    public void tc0013_increase_item_quantity_test() {
+    public void tc0013_increase_item_quantity_test() throws InterruptedException {
         homePage = new HomePage(driver);
         homePage.clickBestSellers();
         bestSellersPage = new BestSellersPage(driver);
@@ -83,7 +83,11 @@ public class TestAddToCart {
         itemDescriptionPage.clearQuantity();
         itemDescriptionPage.changeQuantity("3");
         itemDescriptionPage.clickAddToCart();
+        Thread.sleep(1000);
         //Add Assertion
+        String actual = "3";
+        String expected = itemDescriptionPage.checkQuantity();
+        Assert.assertEquals(actual, expected);
     }
 
     @Test(priority = 14)
@@ -97,8 +101,12 @@ public class TestAddToCart {
         itemDescriptionPage.selectColor();
         itemDescriptionPage.clickAddToCart();
         itemDescriptionPage.goToCart();
-        //Add more to test
+        cartPage = new CartPage(driver);
         //Add Assertion
+        String actual = "$34.95 USD";
+        String expected = cartPage.getTotalPrice();
+        Assert.assertEquals(actual, expected);
+
     }
 
     @Test(priority = 15)

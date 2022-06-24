@@ -2,25 +2,22 @@ package testcases;
 
 import library.SelectBrowser;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
 
 import java.time.Duration;
 
-public class TestGiftCart {
+public class TestGiftCart extends Base {
 
-    WebDriver driver;
     HomePage homePage;
     BestSellersPage bestSellersPage;
     ItemDescriptionPage itemDescriptionPage;
     CartPage cartPage;
     CheckoutPage checkoutPage;
 
-    @BeforeTest
+    @BeforeMethod
     public void browserLaunch() {
         driver = SelectBrowser.startBrowser("Chrome");
         driver.get("https://www.alexandnova.com/");

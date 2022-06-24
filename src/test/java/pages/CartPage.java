@@ -23,6 +23,9 @@ public class CartPage {
     @FindBy(css = "button[value='Checkout']")
     WebElement checkoutButton;
 
+    @FindBy(css = "td[class='total last'] span[class='money notranslate']")
+    WebElement totalPrice;
+
     public void clearItem() {
         clearButton.click();
     }
@@ -33,6 +36,10 @@ public class CartPage {
 
     public void clickCheckoutButton() {
         checkoutButton.click();
+    }
+
+    public String getTotalPrice() {
+        return totalPrice.getText();
     }
 
 }

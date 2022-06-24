@@ -3,15 +3,14 @@ package testcases;
 import library.SelectBrowser;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
 
 import java.time.Duration;
 
-public class TestCheckout {
+public class TestCheckout extends Base {
 
-    WebDriver driver;
     HomePage homePage;
     LoginPage loginPage;
     BestSellersPage bestSellersPage;
@@ -21,7 +20,7 @@ public class TestCheckout {
     ShippingPage shippingPage;
     PaymentPage paymentPage;
 
-    @BeforeTest
+    @BeforeMethod
     public void browserLaunch() {
         driver = SelectBrowser.startBrowser("Chrome");
         driver.get("https://www.alexandnova.com/");
@@ -55,10 +54,12 @@ public class TestCheckout {
         shippingPage = new ShippingPage(driver);
         Thread.sleep(3000);
         shippingPage.clickContinueToPayment();
+        paymentPage = new PaymentPage(driver);
         //Assertions
+        Thread.sleep(2000);
         String creditActual = "Credit card";
         String creditExpected = paymentPage.verifyCCPayment();
-        Assert.assertEquals(creditActual, creditExpected);
+        Assert.assertTrue(creditExpected.contains(creditActual));
         String shopActual = "Shop Pay";
         String shopExpected = paymentPage.verifyShopPayPayment();
         Assert.assertEquals(shopActual, shopExpected);

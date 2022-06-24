@@ -1,4 +1,4 @@
-package library;
+package testcases;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -67,9 +67,13 @@ public class Base {
         }
     }
 
+    @AfterMethod
+    public void quitBrowser() {
+        driver.quit();
+    }
+
     @AfterSuite
     public void tearDown() {
         extent.flush();
-        driver.quit();
     }
 }

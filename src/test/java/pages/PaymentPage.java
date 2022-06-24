@@ -14,13 +14,13 @@ public class PaymentPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = "label[for='checkout_payment_gateway_14059208761']")
+    @FindBy(css = ".radio-wrapper.content-box__row[data-gateway-group='direct'][data-gateway-name='credit_card']")
     WebElement cardPaymentOption;
 
-    @FindBy(css = "label[for='checkout_payment_gateway_66130411573'] span[class='visually-hidden']")
+    @FindBy(css = ".radio-wrapper.content-box__row[data-gateway-group='direct'][data-gateway-name='shopify_installments']")
     WebElement shopPayPaymentOption;
 
-    @FindBy(css = "label[for='checkout_payment_gateway_14059175993'] span[class='visually-hidden']")
+    @FindBy(css = ".radio-wrapper.content-box__row[data-gateway-group='express']")
     WebElement payPalPaymentOption;
 
     @FindBy(className = "card-fields-iframe")
@@ -47,11 +47,9 @@ public class PaymentPage {
     public String verifyCCPayment() {
         return cardPaymentOption.getText();
     }
-
     public String verifyShopPayPayment() {
         return shopPayPaymentOption.getText();
     }
-
     public String verifyPayPalPayment() {
         return payPalPaymentOption.getText();
     }
