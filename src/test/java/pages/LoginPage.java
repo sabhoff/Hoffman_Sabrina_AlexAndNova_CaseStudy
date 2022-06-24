@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Page Object Model used as demonstration of knowledge in LoginPage class
+ * Page Object Model used as demonstration of knowledge in LoginPage class Page factory is used in every other page
  */
 public class LoginPage {
 

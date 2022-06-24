@@ -6,8 +6,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-/*
-* The SelectBrowser class is used for selecting a browser to run your selenium tests on.
+/**
+* The SelectBrowser class is used for selecting a browser to run selenium tests on.
 */
 
 public class SelectBrowser {

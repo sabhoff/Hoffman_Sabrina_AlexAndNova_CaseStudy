@@ -17,6 +17,10 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
 
+/**_____________________________________________________________________________________________
+ * Base class includes methods for creating reports, screenshots, and tearing down the project
+ _______________________________________________________________________________________________*/
+
 public class Base {
 
     WebDriver driver;
@@ -24,6 +28,9 @@ public class Base {
     private static ExtentReports extent;
     private static ExtentTest test;
 
+    /**_________________________________________________________________________________
+     * setUpReport sets up the HTML reporter
+     ___________________________________________________________________________________*/
     @BeforeSuite
     public void setUpReport() {
         htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/CapstoneReports.html");
@@ -41,6 +48,11 @@ public class Base {
         htmlReporter.config().setTheme(Theme.DARK);
     }
 
+    /**____________________________________________________________________________
+     * setUpReports names the reports after the methods
+     * @param method
+     * @throws IOException
+     _________________________________________________________________________________*/
     @BeforeMethod
     public void setupReports(Method method) throws IOException {
         String name = method.getName();
@@ -48,6 +60,11 @@ public class Base {
         test.addScreenCaptureFromPath(name + ".png");
     }
 
+    /**_______________________________________________________________________________________________________________________
+     * recordResults ensures that testNG reports if a test passes or fails, as well as closing the browser after each method
+     * @param result
+     * @throws IOException
+     _________________________________________________________________________________________________________________________*/
     @AfterMethod
     public void recordResults(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
@@ -70,6 +87,9 @@ public class Base {
         }
     }
 
+    /**_________________________________________________________________________________
+     * tearDown flushes once suites are runs and allows reports to be generated
+     __________________________________________________________________________________*/
     @AfterSuite
     public void tearDown() {
         extent.flush();

@@ -14,7 +14,6 @@ public class SearchResultsPage {
         PageFactory.initElements(driver, this);
     }
 
-    //.isp_title_search_term
     @FindBy(css = "div[class='search-results-count'] p:nth-child(1)")
     WebElement searchResult;
 

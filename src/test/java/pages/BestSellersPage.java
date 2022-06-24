@@ -13,9 +13,6 @@ public class BestSellersPage {
         PageFactory.initElements(driver, this);
     }
 
-    //@FindBy(css = "article[id='product-list-item-4313722716213'] p[class='product-list-item-price']")
-    //WebElement itemPrice;
-
     @FindBy(css = "article[id='product-list-item-4313722716213'] span[class='money'] span[class='money notranslate']")
     WebElement itemPrice;
 

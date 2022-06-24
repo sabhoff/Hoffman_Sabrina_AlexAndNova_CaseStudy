@@ -1,13 +1,16 @@
 package testcases;
 
 import library.SelectBrowser;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
 
 import java.time.Duration;
+
+/**___________________________________________________________
+ * TestGiftCart class tests the coupon code field in checkout
+ ____________________________________________________________*/
 
 public class TestGiftCart extends Base {
 
@@ -17,6 +20,9 @@ public class TestGiftCart extends Base {
     CartPage cartPage;
     CheckoutPage checkoutPage;
 
+    /**_________________________________________________________________________________
+     * browserLaunch launches the browser and creates an implicit wait for all methods
+     __________________________________________________________________________________*/
     @BeforeMethod
     public void browserLaunch() {
         driver = SelectBrowser.startBrowser("Chrome");
@@ -24,6 +30,11 @@ public class TestGiftCart extends Base {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
 
+    /**______________________________________________________________________________________________________________
+     * tc0016_apply_coupon_code_test tests to make sure that a discount is added when a valid coupon code is entered
+     * Thread sleep is used to allow for elements to load properly
+     * @throws InterruptedException
+     _______________________________________________________________________________________________________________*/
     @Test(priority = 16)
     public void tc0016_apply_coupon_code_test() throws InterruptedException {
         homePage = new HomePage(driver);
@@ -34,6 +45,7 @@ public class TestGiftCart extends Base {
         itemDescriptionPage.selectSize();
         itemDescriptionPage.selectColor();
         itemDescriptionPage.clickAddToCart();
+        //Allow for item to be added to cart
         Thread.sleep(3000);
         itemDescriptionPage.goToCart();
         cartPage = new CartPage(driver);
