@@ -123,6 +123,7 @@ public class TestAddToCart extends Base {
         itemDescriptionPage.goToCart();
         cartPage = new CartPage(driver);
         cartPage.clearItem();
+        Thread.sleep(2000);
         //Assertion
         String expected = "You don't have any items in your cart yet. Continue shopping .";
         String actual = cartPage.cartWarning();

@@ -22,19 +22,19 @@ public class TestSearchFunction extends Base {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
 
-    @Test(priority = 1)
-    public void tc0008_search_results_test() {
+    @Test(priority = 8)
+    public void tc0008_search_results_test() throws InterruptedException {
         homePage = new HomePage(driver);
         homePage.inputSearch("baby shoes");
         homePage.clickSearchButton();
         //Assertion
         searchResultsPage = new SearchResultsPage(driver);
         String expected = searchResultsPage.verifySearchResult();
-        String actual = "baby shoes";
-        Assert.assertEquals(expected, actual);
+        String actual = "'baby shoes'";
+        Assert.assertTrue(expected.contains(actual));
     }
 
-    @Test(priority = 2)
+    @Test(priority = 9)
     public void tc0009_no_search_input_test() {
         homePage = new HomePage(driver);
         homePage.clickSearchButton();

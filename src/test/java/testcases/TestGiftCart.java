@@ -24,7 +24,7 @@ public class TestGiftCart extends Base {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
 
-    @Test(priority = 1)
+    @Test(priority = 16)
     public void tc0016_apply_coupon_code_test() throws InterruptedException {
         homePage = new HomePage(driver);
         homePage.clickBestSellers();

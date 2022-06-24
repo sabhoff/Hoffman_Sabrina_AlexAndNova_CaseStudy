@@ -26,7 +26,7 @@ public class Base {
 
     @BeforeSuite
     public void setUpReport() {
-        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "test-output/CapstoneReports.html");
+        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/CapstoneReports.html");
         extent = new ExtentReports();
 
         extent.attachReporter(htmlReporter);
@@ -54,22 +54,20 @@ public class Base {
             File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             Files.move(screenshot, new File("test-output/xml/" + result.getName() + ".png"));
             test.log(Status.FAIL, result.getThrowable());
+            driver.quit();
         }
 
         else if (result.getStatus() == ITestResult.SUCCESS) {
             File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             Files.move(screenshot, new File("test-output/xml/" + result.getName() + ".png"));
             test.log(Status.PASS, result.getTestName());
+            driver.quit();
         }
 
         else {
             test.log(Status.SKIP, result.getTestName());
+            driver.quit();
         }
-    }
-
-    @AfterMethod
-    public void quitBrowser() {
-        driver.quit();
     }
 
     @AfterSuite
