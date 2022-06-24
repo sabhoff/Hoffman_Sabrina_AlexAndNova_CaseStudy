@@ -23,12 +23,13 @@ public class TestAddToCart extends Base {
     }
 
     @Test(priority = 10)
-    public void tc0010_verify_price_display_test() {
+    public void tc0010_verify_price_display_test() throws InterruptedException {
         homePage = new HomePage(driver);
         homePage.clickBestSellers();
         bestSellersPage = new BestSellersPage(driver);
         bestSellersPage.selectItem();
         itemDescriptionPage = new ItemDescriptionPage(driver);
+        Thread.sleep(2000);
         //Add Assertion
         String actual = "$34.95 USD";
         String expected = itemDescriptionPage.getItemPrice();
@@ -83,7 +84,7 @@ public class TestAddToCart extends Base {
         itemDescriptionPage.clearQuantity();
         itemDescriptionPage.changeQuantity("3");
         itemDescriptionPage.clickAddToCart();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         //Add Assertion
         String actual = "3";
         String expected = itemDescriptionPage.checkQuantity();
