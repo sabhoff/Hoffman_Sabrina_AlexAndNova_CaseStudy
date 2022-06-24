@@ -4,24 +4,24 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="73.238">
+           time="84.350">
     <properties></properties>
 
 
 
             <testcase
                 name="tc0017_payment_mode_check_test"
-                time="23.186"
-                classname="testcases.TestCheckout">
-            </testcase>
-            <testcase
-                name="tc0018_blank_mandatory_field_test"
-                time="24.826"
+                time="26.720"
                 classname="testcases.TestCheckout">
             </testcase>
             <testcase
                 name="tc0019_payment_details_test"
-                time="25.226"
+                time="28.476"
+                classname="testcases.TestCheckout">
+            </testcase>
+            <testcase
+                name="tc0018_blank_mandatory_field_test"
+                time="29.154"
                 classname="testcases.TestCheckout">
             </testcase>
 </testsuite>

@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Hoffman_Sabrina_AlexAndNova_CaseStudy"
-           tests="1"
+<testsuite name="Search Products Test"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="2.268">
+           time="4.398">
     <properties></properties>
 
 
 
             <testcase
                 name="tc0008_search_results_test"
-                time="2.268"
+                time="2.454"
+                classname="testcases.TestSearchFunction">
+            </testcase>
+            <testcase
+                name="tc0009_no_search_input_test"
+                time="1.944"
                 classname="testcases.TestSearchFunction">
             </testcase>
 </testsuite>

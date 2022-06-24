@@ -4,12 +4,12 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="95.559">
+           time="97.931">
     <properties></properties>
 
             <testcase
                 name="tc0002_register_new_user_test"
-                time="24.201"
+                time="24.180"
                 classname="testcases.TestUserRegistration">
 
             <failure type="java.lang.AssertionError" message="expected [My account] but found [Account]">
@@ -21,23 +21,23 @@
 
 
             <testcase
+                name="tc0003_email_validation_no_at_test"
+                time="23.667"
+                classname="testcases.TestUserRegistration">
+            </testcase>
+            <testcase
                 name="tc0004_omit_registration_fields_test"
-                time="23.737"
+                time="24.307"
                 classname="testcases.TestUserRegistration">
             </testcase>
             <testcase
                 name="tc0001_open_registration_page_test"
-                time="2.225"
+                time="2.333"
                 classname="testcases.TestUserRegistration">
             </testcase>
             <testcase
                 name="tc0005_invalid_password_test"
-                time="22.710"
-                classname="testcases.TestUserRegistration">
-            </testcase>
-            <testcase
-                name="tc0003_email_validation_no_at_test"
-                time="22.686"
+                time="23.444"
                 classname="testcases.TestUserRegistration">
             </testcase>
 </testsuite>

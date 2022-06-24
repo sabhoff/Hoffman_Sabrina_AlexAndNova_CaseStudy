@@ -44,8 +44,8 @@ public class TestUserRegistration extends Base{
         loginPage.clickRegisterButton();
         signUpPage = new SignUpPage(driver);
         signUpPage.inputFirstName("Jane");
-        signUpPage.inputLastName("Doe");
-        signUpPage.inputEmail("test4051@gmail.com");
+        signUpPage.inputLastName("Fink");
+        signUpPage.inputEmail("test12563565@gmail.com");
         signUpPage.inputPassword("abc1234");
         signUpPage.clickRegisterButton();
         //Thread sleep to allow time for captcha submission

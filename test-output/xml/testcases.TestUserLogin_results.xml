@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="51.043">
+           time="47.594">
     <properties></properties>
 
 
 
             <testcase
-                name="tc0006_login_user_test"
-                time="27.233"
+                name="tc0007_invalid_email_login_test"
+                time="23.846"
                 classname="testcases.TestUserLogin">
             </testcase>
             <testcase
-                name="tc0007_invalid_email_login_test"
-                time="23.810"
+                name="tc0006_login_user_test"
+                time="23.748"
                 classname="testcases.TestUserLogin">
             </testcase>
 </testsuite>
