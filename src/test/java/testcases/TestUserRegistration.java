@@ -43,8 +43,8 @@ public class TestUserRegistration extends Base{
         loginPage = new LoginPage(driver);
         loginPage.clickRegisterButton();
         signUpPage = new SignUpPage(driver);
-        signUpPage.inputFirstName("Jane");
-        signUpPage.inputLastName("Fink");
+        signUpPage.inputFirstName("Mike");
+        signUpPage.inputLastName("Mountain");
         signUpPage.inputEmail("aeiou369@gmail.com");
         signUpPage.inputPassword("abc1234");
         signUpPage.clickRegisterButton();
