@@ -3,23 +3,24 @@
 
 ## System Requirements
 * Access to internet connection
-* Chrome Browser Installed
-* Firefox Browser Installed
-* Edge Browser Installed
+* Java 8
+* TestNG
+* Jenkins
+* Chrome Browser and Driver Installed
+* Firefox Browser and Driver Installed
+* Edge Browser and Driver Installed
 
 ## Project Description
-This project is used to test the funtions of the [Alex and Nova Ecommerce Website](https://www.alexandnova.com/). Within this project there are tests written to test 
-the function of user registration, user login, search function, product add to cart function, discount application, and the checkout process. A select browser class is 
-used, a base class, and the page factory model is used. Page object model is used in the LoginPage class **ONLY** to show proof of knowledge. This project cannot run
-headless due to captcha forms needing to be filled out manually. 
+This project is used to test the funtions of the [Alex and Nova Ecommerce Website](https://www.alexandnova.com/). Within this project there are automated tests written to test the function of user registration, user login, search function, product add to cart function, discount application, and the checkout process. A select browser class is used, a base class, TestNG annotations, and the page factory model is used. Page object model is used in the LoginPage class **ONLY** to show proof of knowledge. This project cannot runheadless due to captcha forms needing to be filled out manually. 
 
 ## Project Challenges
-During this project I encountered many challenges. These challenges are listed below and many may cause issues with running these tests in the future.
-1. The [Alex and Nova Website](https://www.alexandnova.com/) had elements that changed often which lead to tests running one day and not the next due to the element not being found
-2. Captcha forms popped up even when entering invalid data. Due to this I had to add a large amount of sleeps to allow for manual bypass.
+During this project I encountered many challenges. These challenges are listed below and some could cause issues with running these tests in the future.
+1. The [Alex and Nova Website](https://www.alexandnova.com/) had elements that changed often which lead to tests running one day and not the next due to the element not being found. 
+2. Captcha forms popped up even when entering invalid data. Due to this I had to add a large amount of sleeps to allow for manual bypass of captcha.
 3. Many pages would not load fast enough creating issues when trying to find specific elements.
 4. After a few runs of the user registration test, the website would no longer allow me to register any new users. Therefore, always causing my registration test to fail.
-5. While running the search bar test on testNG and on Jenkins the search button brings up different pages every time making the test fail occaisionally.
+5. While running the search bar test on testNG and on Jenkins the search button brings up different pages every time, making the test fail occaisionally.
+6. The original version of Jenkins I had installed would not open the browser when I ran my tests so I had to download the .war version and configure it to open the browser.
 
 ## Dependencies
 <dependencies>
