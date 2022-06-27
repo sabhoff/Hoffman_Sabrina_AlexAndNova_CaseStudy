@@ -20,6 +20,7 @@ public class SelectBrowser {
             driver = new FirefoxDriver();
         }
 
+
         //If browser is Chrome
         else if (browserName.equalsIgnoreCase("Chrome")) {
             System.setProperty("webdriver.chrome.driver", "C:\\Users\\sabri\\SeleniumPractice\\Hoffman_Sabrina_AlexAndNova_CaseStudy\\src\\test\\resources\\chromedriver.exe");
